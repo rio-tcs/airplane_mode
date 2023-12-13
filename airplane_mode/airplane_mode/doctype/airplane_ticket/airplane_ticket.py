@@ -10,17 +10,25 @@ class AirplaneTicket(Document):
         self.total_amount = float(self.flight_price) + sum(item.amount for item in self.add_ons)
     
     def validate(self):
-        # Logic to remove duplicate add-ons
-        unique_add_ons = {}
-        for add_on in self.add_ons:
-            if add_on.item not in unique_add_ons:
-                unique_add_ons[add_on.item] = add_on
-            else:
-                # Optionally, you can log a message or alert the user
-                frappe.msgprint(f"Duplicate add-on '{add_on.item}' removed.")
+        flight = frappe.get_doc('Airplane Flight', self.flight)
+        airplane = frappe.get_doc('Airplane', flight.airplane)
+        num_of_tix = frappe.db.count('Airplane Ticket', filters={
+            'flight': self.flight 
+        })
+        if (num_of_tix < airplane.capacity):
+            # Logic to remove duplicate add-ons
+            unique_add_ons = {}
+            for add_on in self.add_ons:
+                if add_on.item not in unique_add_ons:
+                    unique_add_ons[add_on.item] = add_on
+                else:
+                    # Optionally, you can log a message or alert the user
+                    frappe.msgprint(f"Duplicate add-on '{add_on.item}' removed.")
 
-        # Update the add_ons table with only unique entries
-        self.set('add_ons', list(unique_add_ons.values()))
+            # Update the add_ons table with only unique entries
+            self.set('add_ons', list(unique_add_ons.values()))
+        else:
+            frappe.throw("Unable to create new ticket: This flight has been fully booked")
     
     def on_submit(self):
         if not self.status == 'Boarded':

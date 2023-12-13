@@ -92,6 +92,7 @@
    "reqd": 1
   },
   {
+   "fetch_from": ".duration",
    "fieldname": "duration_of_flight",
    "fieldtype": "Duration",
    "label": "Duration of Flight",
@@ -160,7 +161,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-12-05 17:55:09.675202",
+ "modified": "2023-12-13 17:01:40.014315",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airplane Ticket",
