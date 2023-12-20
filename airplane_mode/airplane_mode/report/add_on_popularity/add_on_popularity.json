@@ -9,7 +9,7 @@
    "width": 0
   },
   {
-   "fieldname": "sum",
+   "fieldname": "count",
    "fieldtype": "Int",
    "label": "Sold Count",
    "width": 0
@@ -23,13 +23,13 @@
  "idx": 0,
  "is_standard": "Yes",
  "letterhead": null,
- "modified": "2023-12-13 17:48:43.719841",
+ "modified": "2023-12-19 17:21:17.241209",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Add-on Popularity",
  "owner": "Administrator",
  "prepared_report": 0,
- "query": "select ty.name AS name, sum(it.amount) AS sum from `tabAirplane Ticket Add-on Type` ty\njoin `tabAirplane Ticket Add-on Item` it\non it.item = ty.name\ngroup by it.item\norder by sum desc;",
+ "query": "select ty.name AS name, count(it.name) AS count from `tabAirplane Ticket Add-on Type` ty\njoin `tabAirplane Ticket Add-on Item` it\non it.item = ty.name\ngroup by it.item\norder by count desc;",
  "ref_doctype": "Airplane Ticket Add-on Type",
  "report_name": "Add-on Popularity",
  "report_type": "Query Report",
