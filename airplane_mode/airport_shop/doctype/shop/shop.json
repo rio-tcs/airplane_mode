@@ -1,0 +1,98 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{shop_name} - {number}",
+ "creation": "2023-12-20 13:44:22.716276",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "shop_name",
+  "number",
+  "area",
+  "column_break_gmvb",
+  "lease_fee_per_month",
+  "tenant",
+  "available_for_lease",
+  "store_picture"
+ ],
+ "fields": [
+  {
+   "fieldname": "number",
+   "fieldtype": "Int",
+   "label": "Number",
+   "reqd": 1
+  },
+  {
+   "fieldname": "tenant",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Tenant",
+   "options": "Tenant"
+  },
+  {
+   "fieldname": "area",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Area",
+   "options": "Shop Area",
+   "reqd": 1
+  },
+  {
+   "fieldname": "shop_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "available_for_lease",
+   "fieldtype": "Check",
+   "label": "Available For Lease"
+  },
+  {
+   "fieldname": "store_picture",
+   "fieldtype": "Attach Image",
+   "hidden": 1,
+   "label": "Store Picture"
+  },
+  {
+   "fieldname": "lease_fee_per_month",
+   "fieldtype": "Currency",
+   "label": "Lease Fee per Month",
+   "mandatory_depends_on": "eval: doc.available_for_lease",
+   "non_negative": 1,
+   "options": "Currency"
+  },
+  {
+   "fieldname": "column_break_gmvb",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "image_field": "store_picture",
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-12-29 15:59:31.936982",
+ "modified_by": "Administrator",
+ "module": "Airport Shop",
+ "name": "Shop",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
