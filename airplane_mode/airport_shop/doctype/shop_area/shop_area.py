@@ -1,0 +1,13 @@
+# Copyright (c) 2023, Rio Pramana and contributors
+# For license information, please see license.txt
+
+# import frappe
+from frappe.model.document import Document
+
+
+class ShopArea(Document):
+	def before_naming(self):
+		self.code = str(self.number) + self.section
+
+	def before_save(self):
+		self.code = str(self.number) + self.section

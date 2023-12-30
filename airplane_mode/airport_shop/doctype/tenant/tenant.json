@@ -1,20 +1,21 @@
 {
  "actions": [],
- "allow_rename": 1,
+ "autoname": "autoincrement",
  "creation": "2023-12-20 11:41:50.495397",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "name1",
+  "tenant_name",
+  "date_of_birth",
+  "gender",
+  "column_break_nnrr",
+  "email",
+  "age",
+  "section_break_cavx",
   "description",
-  "email"
+  "profile_picture"
  ],
  "fields": [
-  {
-   "fieldname": "name1",
-   "fieldtype": "Data",
-   "label": "Name"
-  },
   {
    "fieldname": "description",
    "fieldtype": "Data",
@@ -24,15 +25,58 @@
    "fieldname": "email",
    "fieldtype": "Data",
    "label": "Email",
-   "options": "Email"
+   "options": "Email",
+   "reqd": 1
+  },
+  {
+   "fieldname": "tenant_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "profile_picture",
+   "fieldtype": "Attach Image",
+   "hidden": 1,
+   "label": "Profile Picture"
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "label": "Date of Birth"
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Select",
+   "label": "Gender",
+   "options": "Male\nFemale"
+  },
+  {
+   "depends_on": "eval: doc.date_of_birth",
+   "fieldname": "age",
+   "fieldtype": "Int",
+   "label": "Age",
+   "non_negative": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_nnrr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_cavx",
+   "fieldtype": "Section Break"
   }
  ],
+ "image_field": "profile_picture",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-12-20 11:42:44.139366",
+ "modified": "2023-12-26 15:16:41.210831",
  "modified_by": "Administrator",
  "module": "Airport Shop",
  "name": "Tenant",
+ "naming_rule": "Autoincrement",
  "owner": "Administrator",
  "permissions": [
   {
@@ -48,7 +92,9 @@
    "write": 1
   }
  ],
+ "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "tenant_name"
 }

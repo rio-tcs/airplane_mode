@@ -1,0 +1,92 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:Receipt-{payment_id}-{DD}{MM}{YY}",
+ "creation": "2023-12-30 21:20:07.848254",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "payment_id",
+  "amount",
+  "date_issued",
+  "column_break_wpyu",
+  "shop",
+  "tenant"
+ ],
+ "fields": [
+  {
+   "fieldname": "payment_id",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Payment ID",
+   "options": "Payment Schedule",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fetch_from": "payment_id.shop",
+   "fieldname": "shop",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Shop",
+   "options": "Shop",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fetch_from": "shop.tenant",
+   "fieldname": "tenant",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Tenant",
+   "options": "Tenant",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "date_issued",
+   "fieldtype": "Datetime",
+   "label": "Date Issued",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "payment_id.amount_due",
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Amount",
+   "non_negative": 1,
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_wpyu",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-12-30 21:29:23.805880",
+ "modified_by": "Administrator",
+ "module": "Airport Shop",
+ "name": "Rent Receipt",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
