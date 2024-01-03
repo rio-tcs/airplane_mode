@@ -1,0 +1,21 @@
+{% extends "templates/web.html" %}
+{% block page_content %}
+<div class="container">
+    <h1 class="mt-5 mb-4">Available Shops</h1>
+    <div class="row">
+        {% for shop in shops %}
+            <div class="col-md-4 mb-3">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ shop.name }}</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Shop Number: {{ shop.number }}</h6>
+                        <p class="card-text">Area: {{ shop.area }}</p>
+                        <p class="card-text">Lease Fee per Month: {{ shop.lease_fee_per_month }}</p>
+                        <p class="card-text">Tenant: {{ shop.tenant or 'None' }}</p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
