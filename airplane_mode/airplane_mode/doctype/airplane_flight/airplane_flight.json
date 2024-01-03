@@ -22,6 +22,7 @@
   "is_published",
   "column_break_owmz",
   "time_of_departure",
+  "gate_number",
   "route",
   "amended_from"
  ],
@@ -132,6 +133,12 @@
    "fieldname": "route",
    "fieldtype": "Data",
    "label": "Route"
+  },
+  {
+   "fieldname": "gate_number",
+   "fieldtype": "Data",
+   "label": "Gate Number",
+   "read_only": 1
   }
  ],
  "has_web_view": 1,
@@ -144,7 +151,7 @@
    "link_fieldname": "flight"
   }
  ],
- "modified": "2023-12-19 16:55:02.712870",
+ "modified": "2024-01-03 11:54:40.868990",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airplane Flight",
