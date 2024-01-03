@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "format:FC-{crew_member}-{#####}",
  "creation": "2024-01-03 17:00:10.981790",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -17,7 +18,8 @@
    "in_list_view": 1,
    "label": "Crew Member",
    "options": "Crew Member",
-   "reqd": 1
+   "reqd": 1,
+   "unique": 1
   },
   {
    "fetch_from": "crew_member.role",
@@ -36,10 +38,11 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-01-03 17:05:36.111165",
+ "modified": "2024-01-03 17:21:19.981201",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Flight Crew",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [],
  "sort_field": "modified",

@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "field:full_name",
  "creation": "2024-01-03 16:57:36.908682",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -16,7 +17,8 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Full Name",
-   "reqd": 1
+   "reqd": 1,
+   "unique": 1
   },
   {
    "fieldname": "role",
@@ -40,10 +42,11 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-03 16:59:46.196103",
+ "modified": "2024-01-03 17:19:36.916785",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Crew Member",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {
