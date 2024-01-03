@@ -13,6 +13,7 @@
   "airport_details_section",
   "source_airport",
   "source_airport_code",
+  "gate_number",
   "column_break_hgrz",
   "destination_airport",
   "destination_airport_code",
@@ -22,9 +23,10 @@
   "is_published",
   "column_break_owmz",
   "time_of_departure",
-  "gate_number",
   "route",
-  "amended_from"
+  "amended_from",
+  "crew_details_section",
+  "flight_crews"
  ],
  "fields": [
   {
@@ -127,11 +129,13 @@
    "default": "0",
    "fieldname": "is_published",
    "fieldtype": "Check",
+   "hidden": 1,
    "label": "Is Published?"
   },
   {
    "fieldname": "route",
    "fieldtype": "Data",
+   "hidden": 1,
    "label": "Route"
   },
   {
@@ -139,6 +143,17 @@
    "fieldtype": "Data",
    "label": "Gate Number",
    "read_only": 1
+  },
+  {
+   "fieldname": "crew_details_section",
+   "fieldtype": "Section Break",
+   "label": "Crew Details"
+  },
+  {
+   "fieldname": "flight_crews",
+   "fieldtype": "Table",
+   "label": "Flight Crews",
+   "options": "Flight Crew"
   }
  ],
  "has_web_view": 1,
@@ -151,7 +166,7 @@
    "link_fieldname": "flight"
   }
  ],
- "modified": "2024-01-03 11:54:40.868990",
+ "modified": "2024-01-03 17:05:23.972696",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airplane Flight",
