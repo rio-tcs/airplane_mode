@@ -139,7 +139,7 @@ scheduler_events = {
     # "hourly": ["airplane_mode.tasks.hourly"],
     # "weekly": ["airplane_mode.tasks.weekly"],
     "monthly": [
-        "airplane_mode.airplane_mode.doctype.payment_schedule.create_next_payment_schedules",
+        "airplane_mode.airport_shop.doctype.payment_schedule.payment_schedule.create_next_payment_schedules",
         "airplane_mode.airport_shop.utility_scripts.send_monthly_rent_reminder.send_rent_reminders",
     ],
 }
@@ -212,3 +212,11 @@ scheduler_events = {
 # auth_hooks = [
 # 	"airplane_mode.auth.validate"
 # ]
+
+standard_portal_menu_items = [
+    {
+        "title": "Available Shops",
+        "route": "/available-shops",
+        "reference_doctype": "Shop",
+    },
+]

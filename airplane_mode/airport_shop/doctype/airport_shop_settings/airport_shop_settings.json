@@ -1,0 +1,40 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-01-03 11:51:28.707251",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "temp"
+ ],
+ "fields": [
+  {
+   "fieldname": "temp",
+   "fieldtype": "Data",
+   "label": "temp"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2024-01-03 11:51:47.287117",
+ "modified_by": "Administrator",
+ "module": "Airport Shop",
+ "name": "Airport Shop Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
