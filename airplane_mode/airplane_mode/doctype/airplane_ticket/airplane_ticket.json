@@ -26,7 +26,8 @@
   "departure_date",
   "departure_time",
   "column_break_jyey",
-  "duration_of_flight"
+  "duration_of_flight",
+  "gate_number"
  ],
  "fields": [
   {
@@ -156,12 +157,19 @@
   {
    "fieldname": "column_break_rwjb",
    "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "flight.gate_number",
+   "fieldname": "gate_number",
+   "fieldtype": "Data",
+   "label": "Gate Number",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-12-19 16:48:39.314795",
+ "modified": "2024-01-03 11:55:46.286523",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airplane Ticket",
