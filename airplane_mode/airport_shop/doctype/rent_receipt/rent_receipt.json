@@ -11,7 +11,8 @@
   "date_issued",
   "column_break_wpyu",
   "shop",
-  "tenant"
+  "tenant",
+  "currency_symbol"
  ],
  "fields": [
   {
@@ -56,17 +57,24 @@
    "in_list_view": 1,
    "label": "Amount",
    "non_negative": 1,
+   "options": "currency_symbol",
    "read_only": 1,
    "reqd": 1
   },
   {
    "fieldname": "column_break_wpyu",
    "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "payment_id.currency_symbol",
+   "fieldname": "currency_symbol",
+   "fieldtype": "Data",
+   "label": "Currency Symbol"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-12-30 21:29:23.805880",
+ "modified": "2024-01-04 17:57:40.110964",
  "modified_by": "Administrator",
  "module": "Airport Shop",
  "name": "Rent Receipt",

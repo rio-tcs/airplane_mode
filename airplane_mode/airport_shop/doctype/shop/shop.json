@@ -14,6 +14,7 @@
   "tenant",
   "available_for_lease",
   "store_picture",
+  "currency_symbol",
   "physical_properties_section",
   "length_m",
   "width_m",
@@ -69,7 +70,7 @@
    "label": "Lease Fee per Month",
    "mandatory_depends_on": "eval: doc.available_for_lease",
    "non_negative": 1,
-   "options": "Currency"
+   "options": "currency_symbol"
   },
   {
    "fieldname": "column_break_gmvb",
@@ -115,12 +116,19 @@
    "fieldtype": "Select",
    "label": "Condition",
    "options": "Good\nNeeds Renovation"
+  },
+  {
+   "fieldname": "currency_symbol",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Currency Symbol",
+   "read_only": 1
   }
  ],
  "image_field": "store_picture",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-04 14:51:26.203676",
+ "modified": "2024-01-04 17:39:59.397087",
  "modified_by": "Administrator",
  "module": "Airport Shop",
  "name": "Shop",

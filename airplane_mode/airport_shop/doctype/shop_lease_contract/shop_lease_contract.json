@@ -9,6 +9,7 @@
   "shop",
   "area",
   "contract_signed_on",
+  "currency_symbol",
   "column_break_fxia",
   "amount_owed",
   "lease_duration",
@@ -39,7 +40,7 @@
    "in_list_view": 1,
    "label": "Amount Owed",
    "non_negative": 1,
-   "options": "Currency",
+   "options": "currency_symbol",
    "read_only": 1
   },
   {
@@ -98,12 +99,19 @@
    "label": "Tenant",
    "options": "Tenant",
    "reqd": 1
+  },
+  {
+   "fieldname": "currency_symbol",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Currency Symbol",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-12-29 22:14:46.770388",
+ "modified": "2024-01-04 17:40:30.702163",
  "modified_by": "Administrator",
  "module": "Airport Shop",
  "name": "Shop Lease Contract",

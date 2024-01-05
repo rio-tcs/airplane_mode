@@ -7,6 +7,10 @@ from frappe.model.document import Document
 
 class Shop(Document):
     def validate(self):
+        # Auto-set currency symbol from single doctype
+        settings = frappe.get_single("Airport Shop Settings")
+        self.currency_symbol = settings.default_currency
+
         if self.available_for_lease:
             if self.lease_fee_per_month <= 0:
                 frappe.throw("Lease fee cannot be zero")
@@ -15,5 +19,5 @@ class Shop(Document):
                 {"doctype": "Shop Lease Contract", "shop": self.name, "docstatus": 1}
             ):
                 frappe.throw("An active contract for this Shop already exists")
-        if self.length and self.width:
-            self.area_m2 = self.length * self.width
+        if self.length_m and self.width_m:
+            self.area_m2 = self.length_m * self.width_m

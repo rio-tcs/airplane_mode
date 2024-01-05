@@ -5,19 +5,21 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "temp"
+  "default_currency"
  ],
  "fields": [
   {
-   "fieldname": "temp",
-   "fieldtype": "Data",
-   "label": "temp"
+   "default": "IDR",
+   "fieldname": "default_currency",
+   "fieldtype": "Select",
+   "label": "Default Currency",
+   "options": "USD\nIDR"
   }
  ],
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2024-01-03 11:51:47.287117",
+ "modified": "2024-01-04 17:02:10.131750",
  "modified_by": "Administrator",
  "module": "Airport Shop",
  "name": "Airport Shop Settings",

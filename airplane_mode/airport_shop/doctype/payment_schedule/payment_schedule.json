@@ -13,7 +13,8 @@
   "shop",
   "due_on",
   "paid_on",
-  "amended_from"
+  "amended_from",
+  "currency_symbol"
  ],
  "fields": [
   {
@@ -37,7 +38,7 @@
    "fieldtype": "Currency",
    "in_list_view": 1,
    "label": "Amount Due",
-   "options": "Currency",
+   "options": "currency_symbol",
    "read_only": 1,
    "reqd": 1
   },
@@ -81,12 +82,18 @@
    "fieldtype": "Link",
    "label": "Receipt",
    "options": "Rent Receipt"
+  },
+  {
+   "fetch_from": "contract.currency_symbol",
+   "fieldname": "currency_symbol",
+   "fieldtype": "Data",
+   "label": "Currency Symbol"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-12-30 21:34:45.064911",
+ "modified": "2024-01-04 17:56:49.293045",
  "modified_by": "Administrator",
  "module": "Airport Shop",
  "name": "Payment Schedule",
