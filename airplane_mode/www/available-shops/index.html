@@ -4,14 +4,22 @@
     <h1 class="mt-5 mb-4">Available Shops</h1>
     <div class="row">
         {% for shop in shops %}
-            <div class="col-md-4 mb-3">
-                <div class="card h-100">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="{{ shop.store_picture }}" class="card-img-top" alt="No Shop Image">
                     <div class="card-body">
-                        <h5 class="card-title">{{ shop.name }}</h5>
+                        <h5 class="card-title">{{ shop.shop_name }}</h5>
                         <h6 class="card-subtitle mb-2 text-muted">Shop Number: {{ shop.number }}</h6>
                         <p class="card-text">Area: {{ shop.area }}</p>
-                        <p class="card-text">Lease Fee per Month: {{ shop.lease_fee_per_month }}</p>
-                        <p class="card-text">Tenant: {{ shop.tenant or 'None' }}</p>
+                        <p class="card-text">
+                            Lease Fee per Month: 
+                            <span class="lease-fee">Rp{{ shop.lease_fee_per_month }}</span>
+                        </p>
+                        <p class="card-text">Condition: {{ shop.condition or 'N/A' }}</p>
+                        <div class="physical-properties">
+                            <p class="card-text">Area: {{ shop.area_m2 }} m<sup>2</sup></p>
+                            <p class="card-text">Height: {{ shop.height_m }} m</p>
+                        </div>
                     </div>
                 </div>
             </div>

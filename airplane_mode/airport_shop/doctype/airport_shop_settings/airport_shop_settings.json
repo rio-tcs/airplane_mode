@@ -5,7 +5,10 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "default_currency"
+  "default_currency",
+  "minimum_lease_duration_months",
+  "maximum_lease_duration_months",
+  "maximum_shops_per_tenant"
  ],
  "fields": [
   {
@@ -14,12 +17,35 @@
    "fieldtype": "Select",
    "label": "Default Currency",
    "options": "USD\nIDR"
+  },
+  {
+   "fieldname": "minimum_lease_duration_months",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Minimum Lease Duration (Months)",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "maximum_shops_per_tenant",
+   "fieldtype": "Int",
+   "label": "Maximum Shops per Tenant",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "maximum_lease_duration_months",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Maximum Lease Duration (Months)",
+   "non_negative": 1,
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2024-01-04 17:02:10.131750",
+ "modified": "2024-01-05 11:15:24.457291",
  "modified_by": "Administrator",
  "module": "Airport Shop",
  "name": "Airport Shop Settings",
