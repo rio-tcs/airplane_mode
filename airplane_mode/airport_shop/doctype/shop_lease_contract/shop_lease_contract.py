@@ -3,7 +3,7 @@
 
 import frappe
 from frappe.model.document import Document
-from frappe.utils import add_months
+from frappe.utils import add_months, today
 
 from airplane_mode.airport_shop.doctype.payment_schedule.payment_schedule import (
     create_payment_schedule,
@@ -42,11 +42,11 @@ class ShopLeaseContract(Document):
             "Shop Lease Contract",
             {
                 "tenant": self.tenant,
-                "docstatus": 1,  # Document status 1 means the document is submitted
+                "docstatus": 1,
                 "lease_ends_on": [
                     ">",
                     "today",
-                ],  # Assuming there is an end_date field to indicate active contracts
+                ],
             },
         )
         if active_contracts >= max_shops_allowed:

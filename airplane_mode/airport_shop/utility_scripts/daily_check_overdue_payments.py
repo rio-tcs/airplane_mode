@@ -6,7 +6,7 @@ def update_overdue_payment_schedules():
     # Fetch all unpaid Payment Schedules where due_on is less than today and docstatus is 0 (Draft)
     payment_schedules = frappe.get_all(
         "Payment Schedule",
-        filters={"due_on": ["<", today()], "status": "Unpaid", "docstatus": 0},  # Draft
+        filters={"due_on": ["<", today()], "status": "Unpaid", "docstatus": 0},
         fields=["name", "due_on", "status"],
     )
 
