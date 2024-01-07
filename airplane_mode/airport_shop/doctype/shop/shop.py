@@ -16,7 +16,12 @@ class Shop(Document):
                 frappe.throw("Lease fee cannot be zero")
 
             if frappe.db.exists(
-                {"doctype": "Shop Lease Contract", "shop": self.name, "docstatus": 1}
+                {
+                    "doctype": "Shop Lease Contract",
+                    "shop": self.name,
+                    "docstatus": 1,
+                    "contract_status": "Active",
+                }
             ):
                 frappe.throw("An active contract for this Shop already exists")
         if self.length_m and self.width_m:

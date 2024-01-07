@@ -1,7 +1,7 @@
 import frappe
 
 
-def create_default_records():
+def create_default_starter_records():
     # Create Tenant
     create_tenant_records()
 
@@ -11,13 +11,17 @@ def create_default_records():
     # Create a Shop
     create_shop_records()
 
+    print("Default starter records created successfully!")
+
+
+def create_default_transaction_records():
     # Create a Shop Lease Contract
     create_lease_contract_records()
 
     # Create Payment Schedule
     create_payment_schedule_records()
 
-    print("Default records created successfully!")
+    print("Default transaction records created successfully!")
 
 
 def create_shop_records():
@@ -374,7 +378,7 @@ def create_lease_contract_records():
             "tenant": 16,
             "amount_owed": 180,
             "contract_signed_on": "2023-08-08",
-            "status": "Active",
+            "contract_status": "Active",
             "docstatus": 1,
         }
     ).insert()
@@ -386,10 +390,12 @@ def create_lease_contract_records():
             "tenant": 16,
             "amount_owed": 120,
             "contract_signed_on": "2023-06-04",
-            "status": "Active",
+            "contract_status": "Active",
             "docstatus": 1,
         }
     ).insert()
+
+    # To test expired contract logic
     frappe.get_doc(
         {
             "doctype": "Shop Lease Contract",
@@ -398,10 +404,11 @@ def create_lease_contract_records():
             "tenant": 18,
             "amount_owed": 660,
             "contract_signed_on": "2020-10-09",
-            "status": "Expired",
+            "contract_status": "Active",
             "docstatus": 1,
         }
     ).insert()
+
     frappe.get_doc(
         {
             "doctype": "Shop Lease Contract",
@@ -410,68 +417,74 @@ def create_lease_contract_records():
             "tenant": 20,
             "amount_owed": 1440,
             "contract_signed_on": "2024-01-01",
-            "status": "Active",
+            "contract_status": "Active",
             "docstatus": 1,
         }
     ).insert()
 
 
 def create_payment_schedule_records():
+    dunkin_9_contract = frappe.get_last_doc(
+        "Shop Lease Contract",
+        filters={"shop": "Dunkin Donuts - 9", "contract_status": "Active"},
+    )
     frappe.get_doc(
         {
             "doctype": "Payment Schedule",
-            "contract": "Contract - Dunkin Donuts - 9 - 001",
+            "contract": dunkin_9_contract.name,
             "shop": "Dunkin Donuts - 9",
             "amount_due": 15,
             "due_on": "2023-09-08",
             "paid_on": "2023-09-09",
             "status": "Paid",
-            "docstatus": 1,
+            "docstatus": 0,
         }
-    ).insert()
+    ).insert().submit()
     frappe.get_doc(
         {
             "doctype": "Payment Schedule",
-            "contract": "Contract - Dunkin Donuts - 9 - 001",
+            "contract": dunkin_9_contract.name,
             "shop": "Dunkin Donuts - 9",
             "amount_due": 15,
             "due_on": "2023-10-08",
             "paid_on": "2023-10-09",
             "status": "Paid",
-            "docstatus": 1,
+            "docstatus": 0,
         }
-    ).insert()
+    ).insert().submit()
     frappe.get_doc(
         {
             "doctype": "Payment Schedule",
-            "contract": "Contract - Dunkin Donuts - 9 - 001",
+            "contract": dunkin_9_contract.name,
             "shop": "Dunkin Donuts - 9",
             "amount_due": 15,
             "due_on": "2023-11-08",
             "paid_on": "2023-11-09",
             "status": "Paid",
-            "docstatus": 1,
+            "docstatus": 0,
         }
-    ).insert()
+    ).insert().submit()
+    # To test overdue logic
     frappe.get_doc(
         {
             "doctype": "Payment Schedule",
-            "contract": "Contract - Dunkin Donuts - 9 - 001",
+            "contract": dunkin_9_contract.name,
             "shop": "Dunkin Donuts - 9",
             "amount_due": 15,
             "due_on": "2023-12-08",
-            "paid_on": "2023-12-09",
-            "status": "Paid",
-            "docstatus": 1,
-        }
-    ).insert()
-    frappe.get_doc(
-        {
-            "doctype": "Payment Schedule",
-            "contract": "Contract - Dunkin Donuts - 9 - 001",
-            "shop": "Dunkin Donuts - 9",
-            "amount_due": 15,
-            "due_on": "2024-01-08",
             "status": "Unpaid",
+            "docstatus": 0,
         }
     ).insert()
+
+    # To test creating monthly payment schedule automatically, don't create this doc
+    # frappe.get_doc(
+    #     {
+    #         "doctype": "Payment Schedule",
+    #         "contract": dunkin_9_contract.name,
+    #         "shop": "Dunkin Donuts - 9",
+    #         "amount_due": 15,
+    #         "due_on": "2024-01-08",
+    #         "status": "Unpaid",
+    #     }
+    # ).insert()

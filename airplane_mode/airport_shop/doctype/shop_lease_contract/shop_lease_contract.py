@@ -3,7 +3,7 @@
 
 import frappe
 from frappe.model.document import Document
-from frappe.utils import add_months, today
+from frappe.utils import add_months
 
 from airplane_mode.airport_shop.doctype.payment_schedule.payment_schedule import (
     create_payment_schedule,
@@ -14,14 +14,20 @@ class ShopLeaseContract(Document):
     def before_submit(self):
         self.contract_signed_on = today()
         self.lease_ends_on = add_months(self.contract_signed_on, self.lease_duration)
-        self.status = "Active"
+        self.contract_status = "Active"
         shop = frappe.get_doc("Shop", self.shop)
         shop.available_for_lease = 0
         shop.tenant = self.tenant
         shop.save()
 
     def before_cancel(self):
-        self.status = "Voided"
+        self.contract_status = "Voided"
+
+    def on_cancel(self):
+        shop = frappe.get_doc("Shop", self.shop)
+        shop.available_for_lease = 1
+        shop.tenant = ""
+        shop.save()
 
     def before_save(self):
         shop = frappe.get_doc("Shop", self.shop)
@@ -68,6 +74,11 @@ class ShopLeaseContract(Document):
 def validate_active_contract(shop):
     """Check if there is an active contract for the shop"""
     if frappe.db.exists(
-        {"doctype": "Shop Lease Contract", "shop": shop, "docstatus": 1}
+        {
+            "doctype": "Shop Lease Contract",
+            "shop": shop,
+            "docstatus": 1,
+            "contract_status": "Active",
+        }
     ):
         frappe.throw("An active contract for this Shop already exists")

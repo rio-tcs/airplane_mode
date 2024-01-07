@@ -7,8 +7,10 @@ def send_rent_reminders():
         SELECT
             s.tenant,
             t.email,
+            t.tenant_name,
             GROUP_CONCAT(DISTINCT s.name ORDER BY ps.due_on ASC) as shops,
-            GROUP_CONCAT(DISTINCT ps.due_on ORDER BY ps.due_on ASC) as due_dates
+            GROUP_CONCAT(DISTINCT ps.due_on ORDER BY ps.due_on ASC) as due_dates,
+            GROUP_CONCAT(DISTINCT ps.status ORDER BY ps.due_on ASC) as statuses
         FROM
             `tabPayment Schedule` ps
         INNER JOIN
@@ -16,7 +18,7 @@ def send_rent_reminders():
         INNER JOIN
             `tabTenant` t ON s.tenant = t.name
         WHERE
-            ps.docstatus = 1 AND
+            ps.docstatus = 0 AND
             ps.status NOT IN ('Paid', 'Voided')
         GROUP BY
             s.tenant
@@ -30,16 +32,21 @@ def send_rent_reminders():
 
 def send_rent_due_email(tenant_info):
     shops_due = zip(
-        tenant_info["shops"].split(","), tenant_info["due_dates"].split(",")
+        tenant_info["shops"].split(","),
+        tenant_info["due_dates"].split(","),
+        tenant_info["statuses"].split(","),  # Include statuses
     )
     rent_details = "".join(
-        f"<li>Shop {shop}: due on {formatdate(due_date)}</li>"
-        for shop, due_date in shops_due
+        f"<li>Shop {shop}: due on {formatdate(due_date)} (Status: {status})</li>"
+        for shop, due_date, status in shops_due
     )
 
+    tenant_name = tenant_info.get(
+        "tenant_name", "Tenant"
+    )  # Fallback to "Tenant" if name is not available
     subject = "Upcoming Rent Due Reminder"
     message = f"""
-        <p>Dear Tenant,</p>
+        <p>Dear {tenant_name},</p>
         <p>This is a friendly reminder that rent for your leased shop(s) is due soon:</p>
         <ul>
             {rent_details}
