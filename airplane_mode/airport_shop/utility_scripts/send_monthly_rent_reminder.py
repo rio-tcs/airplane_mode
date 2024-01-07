@@ -76,11 +76,9 @@ def send_test_email(recipient_email, subject, message):
 
 def test_email():
     # Set the recipient's email, subject, and message
-    test_recipient = (
-        "riopramana@tobaconsulting.com"  # Replace with an actual email address
-    )
+    test_recipient = "riopramana@tobaconsulting.com"
     test_subject = "Test Email from Frappe"
     test_message = "This is a test email sent from the Frappe framework to verify email functionality."
 
-    # Send the test email and log errors if any
+    # Send the test email
     send_test_email(test_recipient, test_subject, test_message)

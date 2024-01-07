@@ -9,10 +9,10 @@ def get_context(context):
             "number",
             "area",
             "lease_fee_per_month",
-            "store_picture",  # Assuming 'image' is the field name for the shop image
-            "area_m2",  # Assuming there is a 'length' field
-            "height_m",  # Assuming there is a 'height' field
-            "condition",  # Assuming there is a 'condition' field
+            "store_picture",
+            "area_m2",
+            "height_m",
+            "condition",
         ],
         filters={"available_for_lease": 1},
     )
