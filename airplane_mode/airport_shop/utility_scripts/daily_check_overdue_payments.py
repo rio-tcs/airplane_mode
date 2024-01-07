@@ -14,4 +14,4 @@ def update_overdue_payment_schedules():
         doc = frappe.get_doc("Payment Schedule", payment_schedule.name)
         doc.status = "Overdue"
         doc.save()
-        frappe.db.commit()  # Commit changes to the database
+        # frappe.db.commit()  # Commit changes to the database

@@ -2,11 +2,12 @@
 # For license information, please see license.txt
 
 import frappe
+from frappe.model.document import Document
+from frappe.utils import add_months, today
+
 from airplane_mode.airport_shop.doctype.payment_schedule.payment_schedule import (
     create_payment_schedule,
 )
-from frappe.model.document import Document
-from frappe.utils import add_months, today
 
 
 class ShopLeaseContract(Document):

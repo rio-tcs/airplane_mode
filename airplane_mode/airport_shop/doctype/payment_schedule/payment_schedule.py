@@ -2,18 +2,18 @@
 # For license information, please see license.txt
 
 import frappe
-from airplane_mode.airport_shop.doctype.rent_receipt.rent_receipt import (
-    create_rent_receipt,
-)
 from frappe.model.document import Document
 from frappe.utils import add_months, today
 
+from airplane_mode.airport_shop.doctype.rent_receipt.rent_receipt import (
+    create_rent_receipt,
+)
+
 
 class PaymentSchedule(Document):
-    def on_submit(self):
+    def before_submit(self):
         self.status = "Paid"
         self.paid_on = today()
-        self.save()
         self.receipt = create_rent_receipt(self)
 
 
