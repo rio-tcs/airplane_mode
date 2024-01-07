@@ -9,7 +9,7 @@
  "idx": 0,
  "is_standard": "Yes",
  "letterhead": null,
- "modified": "2023-12-30 00:04:09.426715",
+ "modified": "2024-01-07 19:28:07.778791",
  "modified_by": "Administrator",
  "module": "Airport Shop",
  "name": "Shops per Airport",
@@ -18,6 +18,6 @@
  "query": "SELECT\n    count(ts.name) AS \"Total Shops\",\n    ta.name AS \"Airport\"\nFROM\n    `tabShop` ts\nJOIN\n    `tabShop Area` tsa ON ts.area = tsa.name\nJOIN\n    `tabAirport` ta ON ta.name = tsa.airport\nGROUP BY\n    ta.name",
  "ref_doctype": "Shop",
  "report_name": "Shops per Airport",
- "report_type": "Query Report",
+ "report_type": "Script Report",
  "roles": []
 }
