@@ -11,7 +11,7 @@ from airplane_mode.airport_shop.doctype.rent_receipt.rent_receipt import (
 
 
 class PaymentSchedule(Document):
-    def on_submit(self):
+    def before_submit(self):
         self.status = "Paid"
         self.paid_on = today()
         self.receipt = create_rent_receipt(self)
@@ -55,16 +55,17 @@ def create_next_payment_schedules():
         last_payment_schedule = frappe.get_last_doc(
             "Payment Schedule",
             filters={"contract": contract.name},
-            fields=["due_on"],
             order_by="due_on desc",
         )
 
         if last_payment_schedule:
             # Calculate the next due date
             next_due_date = add_months(last_payment_schedule.due_on, 1)
+            next_due_date_str = next_due_date.strftime("%Y-%m-%d")
+            due_on_str = last_payment_schedule.due_on.strftime("%Y-%m-%d")
             if (
-                (today_date >= last_payment_schedule.due_on)
-                and (today_date < next_due_date)
+                (today_date >= due_on_str)
+                and (today_date < next_due_date_str)
                 and (next_due_date <= contract.lease_ends_on)
             ):
                 create_payment_schedule(contract, next_due_date)

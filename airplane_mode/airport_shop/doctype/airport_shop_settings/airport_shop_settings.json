@@ -5,19 +5,47 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "temp"
+  "default_currency",
+  "minimum_lease_duration_months",
+  "maximum_lease_duration_months",
+  "maximum_shops_per_tenant"
  ],
  "fields": [
   {
-   "fieldname": "temp",
-   "fieldtype": "Data",
-   "label": "temp"
+   "default": "IDR",
+   "fieldname": "default_currency",
+   "fieldtype": "Select",
+   "label": "Default Currency",
+   "options": "USD\nIDR"
+  },
+  {
+   "fieldname": "minimum_lease_duration_months",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Minimum Lease Duration (Months)",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "maximum_shops_per_tenant",
+   "fieldtype": "Int",
+   "label": "Maximum Shops per Tenant",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "maximum_lease_duration_months",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Maximum Lease Duration (Months)",
+   "non_negative": 1,
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2024-01-03 11:51:47.287117",
+ "modified": "2024-01-07 14:51:00.066394",
  "modified_by": "Administrator",
  "module": "Airport Shop",
  "name": "Airport Shop Settings",
@@ -32,6 +60,23 @@
    "role": "System Manager",
    "share": 1,
    "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Airport Authority Personnel",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Shop Manager",
+   "share": 1
   }
  ],
  "sort_field": "modified",

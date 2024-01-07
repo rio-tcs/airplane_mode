@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "format:Contract - {shop} - {###}",
  "creation": "2023-12-21 13:06:28.420952",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -9,6 +10,7 @@
   "shop",
   "area",
   "contract_signed_on",
+  "contract_status",
   "column_break_fxia",
   "amount_owed",
   "lease_duration",
@@ -16,7 +18,8 @@
   "tenant",
   "section_break_kbud",
   "description",
-  "amended_from"
+  "amended_from",
+  "currency_symbol"
  ],
  "fields": [
   {
@@ -39,7 +42,7 @@
    "in_list_view": 1,
    "label": "Amount Owed",
    "non_negative": 1,
-   "options": "Currency",
+   "options": "currency_symbol",
    "read_only": 1
   },
   {
@@ -58,11 +61,13 @@
    "reqd": 1
   },
   {
+   "fetch_from": "shop.area",
    "fieldname": "area",
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Area",
    "options": "Shop Area",
+   "read_only": 1,
    "reqd": 1
   },
   {
@@ -98,15 +103,32 @@
    "label": "Tenant",
    "options": "Tenant",
    "reqd": 1
+  },
+  {
+   "fieldname": "currency_symbol",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Currency Symbol",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "-",
+   "fieldname": "contract_status",
+   "fieldtype": "Select",
+   "label": "Contract Status",
+   "options": "-\nActive\nExpired\nVoided",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-12-29 22:14:46.770388",
+ "modified": "2024-01-07 16:08:02.920329",
  "modified_by": "Administrator",
  "module": "Airport Shop",
  "name": "Shop Lease Contract",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {

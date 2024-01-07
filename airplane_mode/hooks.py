@@ -135,7 +135,10 @@ app_license = "mit"
 
 scheduler_events = {
     # "all": ["airplane_mode.tasks.all"],
-    # "daily": ["airplane_mode.tasks.daily"],
+    "daily": [
+        "airplane_mode.airport_shop.utility_scripts.daily_check_expired_contracts.update_expired_contracts",
+        "airplane_mode.airport_shop.utility_scripts.daily_check_overdue_payments.update_overdue_payment_schedules",
+    ],
     # "hourly": ["airplane_mode.tasks.hourly"],
     # "weekly": ["airplane_mode.tasks.weekly"],
     "monthly": [
