@@ -13,6 +13,7 @@ def get_context(context):
             "area_m2",
             "height_m",
             "condition",
+            "name",
         ],
         filters={"available_for_lease": 1},
     )

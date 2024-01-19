@@ -16,10 +16,9 @@
                             <span class="lease-fee">Rp{{ shop.lease_fee_per_month }}</span>
                         </p>
                         <p class="card-text">Condition: {{ shop.condition or 'N/A' }}</p>
-                        <div class="physical-properties">
-                            <p class="card-text">Area: {{ shop.area_m2 }} m<sup>2</sup></p>
-                            <p class="card-text">Height: {{ shop.height_m }} m</p>
-                        </div>
+                        <p class="card-text">Area: {{ shop.area_m2 }} m<sup>2</sup></p>
+                        <p class="card-text">Height: {{ shop.height_m }} m</p>
+                        <a href="/shop-lease-form/new?shop={{ shop.name }}" class="btn btn-primary">Request Lease</a>
                     </div>
                 </div>
             </div>

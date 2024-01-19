@@ -57,8 +57,14 @@
   }
  ],
  "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2024-01-07 14:48:54.874827",
+ "links": [
+  {
+   "group": "Shops",
+   "link_doctype": "Shop",
+   "link_fieldname": "area"
+  }
+ ],
+ "modified": "2024-01-19 13:50:44.092723",
  "modified_by": "Administrator",
  "module": "Airport Shop",
  "name": "Shop Area",
