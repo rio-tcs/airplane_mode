@@ -2,6 +2,7 @@ import frappe
 
 
 def get_context(context):
+    context.show_sidebar = True
     context.shops = frappe.get_all(
         "Shop",
         fields=[
