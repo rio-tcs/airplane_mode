@@ -71,8 +71,19 @@
  ],
  "image_field": "profile_picture",
  "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2024-01-07 14:48:18.824548",
+ "links": [
+  {
+   "group": "Shops",
+   "link_doctype": "Shop",
+   "link_fieldname": "tenant"
+  },
+  {
+   "group": "Shops",
+   "link_doctype": "Shop Lease Contract",
+   "link_fieldname": "tenant"
+  }
+ ],
+ "modified": "2024-01-19 13:45:35.109784",
  "modified_by": "Administrator",
  "module": "Airport Shop",
  "name": "Tenant",

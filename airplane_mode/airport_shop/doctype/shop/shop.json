@@ -127,8 +127,13 @@
  ],
  "image_field": "store_picture",
  "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2024-01-07 14:44:34.990469",
+ "links": [
+  {
+   "link_doctype": "Shop Lease Contract",
+   "link_fieldname": "shop"
+  }
+ ],
+ "modified": "2024-01-19 13:48:11.718934",
  "modified_by": "Administrator",
  "module": "Airport Shop",
  "name": "Shop",

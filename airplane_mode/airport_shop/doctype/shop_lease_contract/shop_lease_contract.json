@@ -123,8 +123,14 @@
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
- "links": [],
- "modified": "2024-01-07 16:08:02.920329",
+ "links": [
+  {
+   "group": "Payments",
+   "link_doctype": "Payment Schedule",
+   "link_fieldname": "contract"
+  }
+ ],
+ "modified": "2024-01-19 14:11:59.449761",
  "modified_by": "Administrator",
  "module": "Airport Shop",
  "name": "Shop Lease Contract",
