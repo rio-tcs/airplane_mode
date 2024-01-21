@@ -6,6 +6,9 @@ app_email = "riopramana@tobaconsulting.com"
 app_license = "mit"
 # required_apps = []
 
+# fixtures = ["Web Page", "Airport", "Airline", "Shop Area", "Airport Shop Settings"]
+fixtures = ["Web Page"]
+
 # Includes in <head>
 # ------------------
 
