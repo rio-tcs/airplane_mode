@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"SCRVPpEYCR\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Airport Shops</span>\",\"col\":12}},{\"id\":\"rrZyOHVLwq\",\"type\":\"paragraph\",\"data\":{\"text\":\"This is your workspace all around the Airport Shop module.\",\"col\":12}},{\"id\":\"u6uwyRYO4q\",\"type\":\"card\",\"data\":{\"card_name\":\"Important DocTypes\",\"col\":6}},{\"id\":\"1npyE9sY2D\",\"type\":\"card\",\"data\":{\"card_name\":\"Settings\",\"col\":6}},{\"id\":\"KsMBK_4z2X\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Filtered DocTypes</b></span>\",\"col\":12}},{\"id\":\"-QQozdnp3c\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Shops Need Fixing\",\"col\":3}},{\"id\":\"aQexhZtxjj\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Overdue Payments\",\"col\":3}},{\"id\":\"E2KbNOLHXx\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Active Contracts\",\"col\":3}}]",
+ "content": "[{\"id\":\"SCRVPpEYCR\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Airport Shops</span>\",\"col\":12}},{\"id\":\"rrZyOHVLwq\",\"type\":\"paragraph\",\"data\":{\"text\":\"This is your workspace all around the Airport Shop module.\",\"col\":12}},{\"id\":\"u6uwyRYO4q\",\"type\":\"card\",\"data\":{\"card_name\":\"Important DocTypes\",\"col\":6}},{\"id\":\"1npyE9sY2D\",\"type\":\"card\",\"data\":{\"card_name\":\"Settings\",\"col\":6}},{\"id\":\"KsMBK_4z2X\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Filtered DocTypes</b></span>\",\"col\":12}},{\"id\":\"-QQozdnp3c\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Shops Need Fixing\",\"col\":3}},{\"id\":\"aQexhZtxjj\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Overdue Payments\",\"col\":4}},{\"id\":\"E2KbNOLHXx\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Active Contracts\",\"col\":3}}]",
  "creation": "2024-01-19 17:09:16.048218",
  "custom_blocks": [],
  "docstatus": 0,
@@ -70,7 +70,7 @@
    "type": "Link"
   }
  ],
- "modified": "2024-01-19 17:52:32.414384",
+ "modified": "2024-01-21 16:45:45.770875",
  "modified_by": "Administrator",
  "module": "Airport Shop",
  "name": "Airport Shops",
