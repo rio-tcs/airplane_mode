@@ -145,7 +145,7 @@ scheduler_events = {
     # "weekly": ["airplane_mode.tasks.weekly"],
     "monthly": [
         "airplane_mode.airport_shop.doctype.payment_schedule.payment_schedule.create_next_payment_schedules",
-        "airplane_mode.airport_shop.utility_scripts.send_monthly_rent_reminder.send_rent_reminders",
+        "airplane_mode.airport_shop.utility_scripts.send_monthly_rent_reminder.background_send_rent_reminders",
     ],
 }
 
