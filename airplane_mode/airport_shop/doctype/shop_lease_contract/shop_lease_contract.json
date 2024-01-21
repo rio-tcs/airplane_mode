@@ -130,7 +130,7 @@
    "link_fieldname": "contract"
   }
  ],
- "modified": "2024-01-21 20:33:14.831801",
+ "modified": "2024-01-21 20:42:49.106523",
  "modified_by": "Administrator",
  "module": "Airport Shop",
  "name": "Shop Lease Contract",
@@ -151,6 +151,7 @@
    "write": 1
   }
  ],
+ "search_fields": "shop, area",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": []

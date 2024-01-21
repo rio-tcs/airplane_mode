@@ -134,7 +134,7 @@
    "link_fieldname": "shop"
   }
  ],
- "modified": "2024-01-19 16:16:29.315497",
+ "modified": "2024-01-21 20:39:30.702295",
  "modified_by": "Administrator",
  "module": "Airport Shop",
  "name": "Shop",
@@ -187,6 +187,7 @@
    "share": 1
   }
  ],
+ "search_fields": "area",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [
