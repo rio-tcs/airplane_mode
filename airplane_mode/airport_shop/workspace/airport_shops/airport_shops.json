@@ -1,0 +1,114 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"SCRVPpEYCR\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Airport Shops</span>\",\"col\":12}},{\"id\":\"rrZyOHVLwq\",\"type\":\"paragraph\",\"data\":{\"text\":\"This is your workspace all around the Airport Shop module.\",\"col\":12}},{\"id\":\"u6uwyRYO4q\",\"type\":\"card\",\"data\":{\"card_name\":\"Important DocTypes\",\"col\":6}},{\"id\":\"1npyE9sY2D\",\"type\":\"card\",\"data\":{\"card_name\":\"Settings\",\"col\":6}},{\"id\":\"KsMBK_4z2X\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Filtered DocTypes</b></span>\",\"col\":12}},{\"id\":\"-QQozdnp3c\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Shops Need Fixing\",\"col\":3}},{\"id\":\"aQexhZtxjj\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Overdue Payments\",\"col\":3}},{\"id\":\"E2KbNOLHXx\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Active Contracts\",\"col\":3}}]",
+ "creation": "2024-01-19 17:09:16.048218",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "dashboard-list",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Airport Shops",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Important DocTypes",
+   "link_count": 3,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "All Shop",
+   "link_count": 0,
+   "link_to": "Shop",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "All Tenant",
+   "link_count": 0,
+   "link_to": "Tenant",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "All Contract",
+   "link_count": 0,
+   "link_to": "Shop Lease Contract",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Settings",
+   "link_count": 1,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Airport Shop Settings",
+   "link_count": 0,
+   "link_to": "Airport Shop Settings",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2024-01-19 17:52:32.414384",
+ "modified_by": "Administrator",
+ "module": "Airport Shop",
+ "name": "Airport Shops",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 2.0,
+ "shortcuts": [
+  {
+   "color": "Red",
+   "doc_view": "List",
+   "format": "{} Shops",
+   "label": "Shops Need Fixing",
+   "link_to": "Shop",
+   "stats_filter": "[[\"Shop\",\"status\",\"=\",\"Needs Renovation\",false]]",
+   "type": "DocType"
+  },
+  {
+   "color": "Red",
+   "doc_view": "List",
+   "format": "{} Payments",
+   "label": "Overdue Payments",
+   "link_to": "Payment Schedule",
+   "stats_filter": "[[\"Payment Schedule\",\"status\",\"=\",\"Overdue\",false]]",
+   "type": "DocType"
+  },
+  {
+   "color": "Green",
+   "doc_view": "List",
+   "format": "{} Contracts",
+   "label": "Active Contracts",
+   "link_to": "Shop Lease Contract",
+   "stats_filter": "[[\"Shop Lease Contract\",\"contract_status\",\"=\",\"Active\",false]]",
+   "type": "DocType"
+  }
+ ],
+ "title": "Airport Shops"
+}
