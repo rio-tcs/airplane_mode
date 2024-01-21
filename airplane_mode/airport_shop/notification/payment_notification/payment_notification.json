@@ -1,0 +1,29 @@
+{
+ "attach_print": 0,
+ "channel": "System Notification",
+ "condition": "doc.contract_status == \"Active\"",
+ "creation": "2024-01-21 20:08:04.358725",
+ "date_changed": "due_on",
+ "days_in_advance": 1,
+ "docstatus": 0,
+ "doctype": "Notification",
+ "document_type": "Payment Schedule",
+ "enabled": 1,
+ "event": "Days Before",
+ "idx": 0,
+ "is_standard": 1,
+ "message": "*Payment Due in 24 Hours*\n\nYou have a payment schedule that is due in 24 hours. Please make and confirm the payment before the due date ({{ doc.due_on }}).\n\n*Details*\nPayment Schedule Document: {{ doc.name }}\nShop: {{ doc.shop }}\nAmount: {{ doc.amount_due }}",
+ "modified": "2024-01-21 20:25:03.474790",
+ "modified_by": "Administrator",
+ "module": "Airport Shop",
+ "name": "Payment Notification",
+ "owner": "Administrator",
+ "recipients": [
+  {
+   "receiver_by_role": "System Manager"
+  }
+ ],
+ "send_system_notification": 0,
+ "send_to_all_assignees": 0,
+ "subject": "Payment due in 24 hours! ({{ doc.name }})"
+}

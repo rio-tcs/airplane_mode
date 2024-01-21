@@ -1,0 +1,29 @@
+{
+ "attach_print": 0,
+ "channel": "System Notification",
+ "condition": "doc.contract_status == \"Expired\"",
+ "creation": "2024-01-21 20:12:05.407940",
+ "days_in_advance": 0,
+ "docstatus": 0,
+ "doctype": "Notification",
+ "document_type": "Shop Lease Contract",
+ "enabled": 1,
+ "event": "Value Change",
+ "idx": 0,
+ "is_standard": 1,
+ "message": "*Contract Expired*\n\nContract for {{ doc.shop }} has expired. This shop is now available for lease again.",
+ "modified": "2024-01-21 20:12:05.407940",
+ "modified_by": "Administrator",
+ "module": "Airport Shop",
+ "name": "Contract Expiry Notification",
+ "owner": "Administrator",
+ "recipients": [
+  {
+   "receiver_by_role": "System Manager"
+  }
+ ],
+ "send_system_notification": 0,
+ "send_to_all_assignees": 0,
+ "subject": "Contract for {{ doc.shop }} has expired!",
+ "value_changed": "contract_status"
+}
