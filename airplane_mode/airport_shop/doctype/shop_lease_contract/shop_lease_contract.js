@@ -3,7 +3,7 @@
 
 frappe.ui.form.on("Shop Lease Contract", {
 	refresh(frm) {
-        frm.set_query("shop", function(){
+        frm.set_query("shop", ()=>{
             return {
                 filters: {
                     "available_for_lease": 1

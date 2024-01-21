@@ -8,5 +8,10 @@ frappe.query_reports["Shops per Airport"] = {
 			"fieldname": "airport_country_filter",
 			"label": "Country",
 		}
-	]
+	],
+	onload(report) {
+        report.page.add_button('See Available Shops', function() {
+            window.open('/available-shops');
+        });
+    }
 };
