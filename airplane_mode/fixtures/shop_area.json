@@ -1,0 +1,211 @@
+[
+ {
+  "airport": "Bandar Udara Internasional Soekarno Hatta",
+  "code": "2A",
+  "description": "Default shop area description",
+  "docstatus": 0,
+  "doctype": "Shop Area",
+  "modified": "2024-01-05 17:32:51.046113",
+  "name": "2A - Bandar Udara Internasional Soekarno Hatta",
+  "number": 2,
+  "section": "A"
+ },
+ {
+  "airport": "Bandar Udara Internasional Soekarno Hatta",
+  "code": "3A",
+  "description": "Default shop area description",
+  "docstatus": 0,
+  "doctype": "Shop Area",
+  "modified": "2024-01-05 17:32:51.172932",
+  "name": "3A - Bandar Udara Internasional Soekarno Hatta",
+  "number": 3,
+  "section": "A"
+ },
+ {
+  "airport": "Bandar Udara Internasional Soekarno Hatta",
+  "code": "1B",
+  "description": "Default shop area description",
+  "docstatus": 0,
+  "doctype": "Shop Area",
+  "modified": "2024-01-05 17:32:51.176980",
+  "name": "1B - Bandar Udara Internasional Soekarno Hatta",
+  "number": 1,
+  "section": "B"
+ },
+ {
+  "airport": "Bandar Udara Internasional Soekarno Hatta",
+  "code": "3B",
+  "description": "Default shop area description",
+  "docstatus": 0,
+  "doctype": "Shop Area",
+  "modified": "2024-01-05 17:32:51.180795",
+  "name": "3B - Bandar Udara Internasional Soekarno Hatta",
+  "number": 3,
+  "section": "B"
+ },
+ {
+  "airport": "Bandar Udara Internasional Soekarno Hatta",
+  "code": "1C",
+  "description": "Default shop area description",
+  "docstatus": 0,
+  "doctype": "Shop Area",
+  "modified": "2024-01-05 17:32:51.183905",
+  "name": "1C - Bandar Udara Internasional Soekarno Hatta",
+  "number": 1,
+  "section": "C"
+ },
+ {
+  "airport": "Bandar Udara Internasional Soekarno Hatta",
+  "code": "2C",
+  "description": "Default shop area description",
+  "docstatus": 0,
+  "doctype": "Shop Area",
+  "modified": "2024-01-05 17:32:51.186934",
+  "name": "2C - Bandar Udara Internasional Soekarno Hatta",
+  "number": 2,
+  "section": "C"
+ },
+ {
+  "airport": "Bandar Udara Internasional Soekarno Hatta",
+  "code": "1D",
+  "description": "Default shop area description",
+  "docstatus": 0,
+  "doctype": "Shop Area",
+  "modified": "2024-01-05 17:32:51.190750",
+  "name": "1D - Bandar Udara Internasional Soekarno Hatta",
+  "number": 1,
+  "section": "D"
+ },
+ {
+  "airport": "Incheon International Airport",
+  "code": "2A",
+  "description": "Default shop area description",
+  "docstatus": 0,
+  "doctype": "Shop Area",
+  "modified": "2024-01-05 17:32:51.193672",
+  "name": "2A - Incheon International Airport",
+  "number": 2,
+  "section": "A"
+ },
+ {
+  "airport": "Incheon International Airport",
+  "code": "3A",
+  "description": "Default shop area description",
+  "docstatus": 0,
+  "doctype": "Shop Area",
+  "modified": "2024-01-05 17:32:51.198240",
+  "name": "3A - Incheon International Airport",
+  "number": 3,
+  "section": "A"
+ },
+ {
+  "airport": "Incheon International Airport",
+  "code": "2B",
+  "description": "Default shop area description",
+  "docstatus": 0,
+  "doctype": "Shop Area",
+  "modified": "2024-01-05 17:32:51.201238",
+  "name": "2B - Incheon International Airport",
+  "number": 2,
+  "section": "B"
+ },
+ {
+  "airport": "Incheon International Airport",
+  "code": "3B",
+  "description": "Default shop area description",
+  "docstatus": 0,
+  "doctype": "Shop Area",
+  "modified": "2024-01-05 17:32:51.204093",
+  "name": "3B - Incheon International Airport",
+  "number": 3,
+  "section": "B"
+ },
+ {
+  "airport": "Incheon International Airport",
+  "code": "1C",
+  "description": "Default shop area description",
+  "docstatus": 0,
+  "doctype": "Shop Area",
+  "modified": "2024-01-05 17:32:51.207651",
+  "name": "1C - Incheon International Airport",
+  "number": 1,
+  "section": "C"
+ },
+ {
+  "airport": "Incheon International Airport",
+  "code": "2C",
+  "description": "Default shop area description",
+  "docstatus": 0,
+  "doctype": "Shop Area",
+  "modified": "2024-01-05 17:32:51.210772",
+  "name": "2C - Incheon International Airport",
+  "number": 2,
+  "section": "C"
+ },
+ {
+  "airport": "Incheon International Airport",
+  "code": "1D",
+  "description": "Default shop area description",
+  "docstatus": 0,
+  "doctype": "Shop Area",
+  "modified": "2024-01-05 17:32:51.214094",
+  "name": "1D - Incheon International Airport",
+  "number": 1,
+  "section": "D"
+ },
+ {
+  "airport": "Bandar Udara Internasional Soekarno Hatta",
+  "code": "1Test",
+  "description": null,
+  "docstatus": 0,
+  "doctype": "Shop Area",
+  "modified": "2024-01-07 15:31:43.498634",
+  "name": "1Test - Bandar Udara Internasional Soekarno Hatta",
+  "number": 1,
+  "section": "Test"
+ },
+ {
+  "airport": "Bandar Udara Internasional Soekarno Hatta",
+  "code": null,
+  "description": null,
+  "docstatus": 0,
+  "doctype": "Shop Area",
+  "modified": "2023-12-22 14:05:24.696336",
+  "name": "2B - Bandar Udara Internasional Soekarno Hatta",
+  "number": 2,
+  "section": "B"
+ },
+ {
+  "airport": "Incheon International Airport",
+  "code": null,
+  "description": null,
+  "docstatus": 0,
+  "doctype": "Shop Area",
+  "modified": "2023-12-22 14:05:32.373849",
+  "name": "1A - Incheon International Airport",
+  "number": 1,
+  "section": "A"
+ },
+ {
+  "airport": "Bandar Udara Internasional Soekarno Hatta",
+  "code": null,
+  "description": null,
+  "docstatus": 0,
+  "doctype": "Shop Area",
+  "modified": "2023-12-22 14:05:16.967031",
+  "name": "1A - Bandar Udara Internasional Soekarno Hatta",
+  "number": 1,
+  "section": "A"
+ },
+ {
+  "airport": "Incheon International Airport",
+  "code": "1B",
+  "description": null,
+  "docstatus": 0,
+  "doctype": "Shop Area",
+  "modified": "2023-12-22 15:59:10.229301",
+  "name": "1B - Incheon International Airport",
+  "number": 1,
+  "section": "B"
+ }
+]

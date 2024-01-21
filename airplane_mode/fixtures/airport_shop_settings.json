@@ -1,0 +1,12 @@
+[
+ {
+  "default_currency": "IDR",
+  "docstatus": 0,
+  "doctype": "Airport Shop Settings",
+  "maximum_lease_duration_months": 36,
+  "maximum_shops_per_tenant": 2,
+  "minimum_lease_duration_months": 6,
+  "modified": "2024-01-05 11:36:23.754390",
+  "name": "Airport Shop Settings"
+ }
+]
