@@ -6,7 +6,11 @@
         {% for shop in shops %}
             <div class="col-lg-4 col-md-6 mb-4">
                 <div class="card h-100 shadow-sm">
-                    <img src="{{ shop.store_picture }}" class="card-img-top" alt="No Shop Image">
+                    {% if shop.store_picture %}
+                        <img src="{{ shop.store_picture }}" class="card-img-top" alt="No Shop Image">
+                    {% else %}
+                        <img src="/assets/airplane_mode/no_image.jpg" alt="">
+                    {% endif %}
                     <div class="card-body">
                         <h5 class="card-title">{{ shop.shop_name }}</h5>
                         <h6 class="card-subtitle mb-2 text-muted">Shop Number: {{ shop.number }}</h6>
