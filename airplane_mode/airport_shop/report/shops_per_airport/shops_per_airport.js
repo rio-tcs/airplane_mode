@@ -3,6 +3,10 @@
 
 frappe.query_reports["Shops per Airport"] = {
 	"filters": [
-
+		{
+			"fieldtype": "Data",
+			"fieldname": "airport_country_filter",
+			"label": "Country",
+		}
 	]
 };
