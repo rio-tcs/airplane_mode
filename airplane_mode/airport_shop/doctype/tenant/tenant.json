@@ -83,7 +83,7 @@
    "link_fieldname": "tenant"
   }
  ],
- "modified": "2024-01-19 13:45:35.109784",
+ "modified": "2024-01-21 20:40:58.733394",
  "modified_by": "Administrator",
  "module": "Airport Shop",
  "name": "Tenant",
@@ -137,6 +137,7 @@
    "write": 1
   }
  ],
+ "search_fields": "gender",
  "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",

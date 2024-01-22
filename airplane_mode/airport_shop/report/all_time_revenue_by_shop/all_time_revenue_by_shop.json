@@ -1,0 +1,27 @@
+{
+ "add_total_row": 0,
+ "columns": [],
+ "creation": "2024-01-21 17:25:08.236947",
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "json": "{\"filters\":[[\"Shop Lease Contract\",\"contract_status\",\"!=\",\"Voided\",false],[\"Shop Lease Contract\",\"docstatus\",\"=\",\"1\",false]],\"fields\":[[\"shop\",\"Shop Lease Contract\"],[\"_aggregate_column\",\"Shop Lease Contract\"]],\"order_by\":\"`tabShop Lease Contract`.`modified` desc\",\"add_totals_row\":false,\"page_length\":20,\"column_widths\":{\"shop\":164,\"_aggregate_column\":200},\"group_by\":{\"group_by\":\"`tabShop Lease Contract`.`shop`\",\"aggregate_function\":\"sum\",\"aggregate_on\":\"`tabShop Lease Contract`.`amount_owed`\"}}",
+ "letterhead": null,
+ "modified": "2024-01-21 17:25:35.744141",
+ "modified_by": "Administrator",
+ "module": "Airport Shop",
+ "name": "All-Time Revenue by Shop",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "ref_doctype": "Shop Lease Contract",
+ "report_name": "All-Time Revenue by Shop",
+ "report_type": "Report Builder",
+ "roles": [
+  {
+   "role": "System Manager"
+  }
+ ]
+}

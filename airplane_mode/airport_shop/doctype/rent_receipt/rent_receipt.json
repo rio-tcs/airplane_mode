@@ -76,7 +76,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-07 16:15:59.482701",
+ "modified": "2024-01-21 20:44:26.771216",
  "modified_by": "Administrator",
  "module": "Airport Shop",
  "name": "Rent Receipt",
@@ -129,6 +129,7 @@
    "share": 1
   }
  ],
+ "search_fields": "payment_id, shop",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": []

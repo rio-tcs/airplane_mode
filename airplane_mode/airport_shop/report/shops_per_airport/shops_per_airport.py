@@ -41,11 +41,20 @@ def get_data(filters):
 			`tabShop Area` tsa ON ts.area = tsa.name
 		JOIN
 			`tabAirport` ta ON ta.name = tsa.airport
+        WHERE
+            ta.country LIKE %s
 		GROUP BY
 			ta.name
+        ORDER BY
+            total_shops desc
     """
 
-    return frappe.db.sql(query, as_dict=1)
+    if filters.airport_country_filter:
+        value = f"%{filters.airport_country_filter}%"
+    else:
+        value = "%"
+
+    return frappe.db.sql(query, value, as_dict=1)
 
 
 def get_chart(data):

@@ -12,6 +12,7 @@
   "section",
   "number",
   "section_break_qrhv",
+  "full_area_details",
   "description"
  ],
  "fields": [
@@ -54,6 +55,14 @@
   {
    "fieldname": "section_break_qrhv",
    "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "full_area_details",
+   "fieldtype": "Data",
+   "is_virtual": 1,
+   "label": "Full Area Details",
+   "options": "f\"{doc.airport} - {doc.code}\"",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
@@ -64,7 +73,7 @@
    "link_fieldname": "area"
   }
  ],
- "modified": "2024-01-19 13:50:44.092723",
+ "modified": "2024-01-21 20:37:46.064949",
  "modified_by": "Administrator",
  "module": "Airport Shop",
  "name": "Shop Area",

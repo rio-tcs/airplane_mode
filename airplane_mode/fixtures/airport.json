@@ -1,0 +1,29 @@
+[
+ {
+  "city": "Jakarta",
+  "code": "CGK",
+  "country": "Indonesia",
+  "docstatus": 0,
+  "doctype": "Airport",
+  "modified": "2023-12-01 15:14:28.678898",
+  "name": "Bandar Udara Internasional Soekarno–Hatta"
+ },
+ {
+  "city": "Incheon",
+  "code": "ICN",
+  "country": "South Korea",
+  "docstatus": 0,
+  "doctype": "Airport",
+  "modified": "2023-12-01 15:15:46.929653",
+  "name": "Incheon International Airport"
+ },
+ {
+  "city": "Jakarta",
+  "code": "CGK",
+  "country": "Indonesia",
+  "docstatus": 0,
+  "doctype": "Airport",
+  "modified": "2023-12-01 15:16:18.961998",
+  "name": "Bandar Udara Internasional Soekarno Hatta"
+ }
+]
