@@ -17,7 +17,6 @@ class TestShopArea(FrappeTestCase):
             }
         )
 
-        # Save the document, which should trigger before_save
         shop_area.save()
 
         # Check if code is set correctly
@@ -27,5 +26,7 @@ class TestShopArea(FrappeTestCase):
         )
 
     def tearDown(self):
-        # Clean up to ensure each test is independent
         frappe.db.rollback()
+
+
+# bench --site assignment.local run-tests --module airplane_mode.airport_shop.doctype.shop_area.test_shop_area  --test test_before_save
