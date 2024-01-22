@@ -138,13 +138,13 @@ fixtures = ["Web Page", "Airport", "Airline", "Shop Area", "Airport Shop Setting
 scheduler_events = {
     # "all": ["airplane_mode.tasks.all"],
     "daily": [
-        "airplane_mode.airport_shop.utility_scripts.daily_check_expired_contracts.update_expired_contracts",
-        "airplane_mode.airport_shop.utility_scripts.daily_check_overdue_payments.update_overdue_payment_schedules",
+        "airplane_mode.airport_shop.utility_scripts.daily_check_expired_contracts.background_update_expired_contracts",
+        "airplane_mode.airport_shop.utility_scripts.daily_check_overdue_payments.background_update_overdue_payment_schedules",
     ],
     # "hourly": ["airplane_mode.tasks.hourly"],
     # "weekly": ["airplane_mode.tasks.weekly"],
     "monthly": [
-        "airplane_mode.airport_shop.doctype.payment_schedule.payment_schedule.create_next_payment_schedules",
+        "airplane_mode.airport_shop.doctype.payment_schedule.payment_schedule.background_create_next_payment_schedules",
         "airplane_mode.airport_shop.utility_scripts.send_monthly_rent_reminder.background_send_rent_reminders",
     ],
 }

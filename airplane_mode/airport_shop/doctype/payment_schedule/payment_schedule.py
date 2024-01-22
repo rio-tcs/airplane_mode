@@ -2,12 +2,11 @@
 # For license information, please see license.txt
 
 import frappe
-from frappe.model.document import Document
-from frappe.utils import add_months, today
-
 from airplane_mode.airport_shop.doctype.rent_receipt.rent_receipt import (
     create_rent_receipt,
 )
+from frappe.model.document import Document
+from frappe.utils import add_months, today
 
 
 class PaymentSchedule(Document):
@@ -30,6 +29,12 @@ def create_payment_schedule(contract, due_date):
     new_schedule.amount_due = monthly_amount_due
     new_schedule.status = "Unpaid"
     new_schedule.insert()
+
+
+def background_create_next_payment_schedules():
+    frappe.enqueue(
+        "airplane_mode.airport_shop.doctype.payment_schedule.payment_schedule.create_next_payment_schedules"
+    )
 
 
 def create_next_payment_schedules():

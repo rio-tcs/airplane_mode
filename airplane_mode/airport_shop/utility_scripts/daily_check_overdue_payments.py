@@ -2,6 +2,12 @@ import frappe
 from frappe.utils import today
 
 
+def background_update_overdue_payment_schedules():
+    frappe.enqueue(
+        "airplane_mode.airport_shop.utility_scripts.daily_check_overdue_payments.update_overdue_payment_schedules"
+    )
+
+
 def update_overdue_payment_schedules():
     # Fetch all unpaid Payment Schedules where due_on is less than today and docstatus is 0 (Draft)
     payment_schedules = frappe.get_all(

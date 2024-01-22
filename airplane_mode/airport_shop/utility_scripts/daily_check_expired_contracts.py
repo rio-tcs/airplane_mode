@@ -2,6 +2,12 @@ import frappe
 from frappe.utils import today
 
 
+def background_update_expired_contracts():
+    frappe.enqueue(
+        "airplane_mode.airport_shop.utility_scripts.daily_check_expired_contracts.update_expired_contracts"
+    )
+
+
 def update_expired_contracts():
     # Fetch all active contracts where lease_ends_on is less than today
     contracts = frappe.get_all(
